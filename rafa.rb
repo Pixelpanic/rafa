@@ -7,7 +7,7 @@ require 'net/http'
 require 'net/https'
 require 'fileutils' 
 
-print " Start contacting Fucking SMT server... \n"
+print " Start contacting dest server... \n"
 
 
 #Contact SMT Server by URI - HTML to String
@@ -16,7 +16,7 @@ print " Start contacting Fucking SMT server... \n"
 	print " Your URI request is : " , smt
 	print "\n" , "Trying SSL Connection..."
 	
-#Due to fucking SMT is using HTTPS connect, we have to enable ruby to use port 443	
+#Due to some server is using HTTPS connect, we have to enable ruby to use port 443	
 	
 
 	http = Net::HTTP.new(smt.host, smt.port)
@@ -28,16 +28,15 @@ print " Start contacting Fucking SMT server... \n"
 	print "\n", "SSL Connection est." , "\n"
 		
 	
-#Start request HTML file formSMT server
+#Start request server provide HTML and covert to string
   
 	req = Net::HTTP::Get.new(smt.request_uri)
 	res = http.request(req)
 	
 	smtstr = res.body
 
-
 #Print HTML for debug purpose only
-	print " 搞掂. 黎大鈞正仆街! \n \n"
+	print " 搞掂. 黎XX正仆街! \n \n"
 	print smtstr
 	print "\n \n"
 
