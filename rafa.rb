@@ -11,7 +11,8 @@ print " Start contacting dest server... \n"
 
 
 #Contact SMT Server by URI - HTML to String
-	smt = URI.parse("https://')
+	smt = URI.parse("https://'
+	")
 
 	print " Your URI request is : " , smt
 	print "\n" , "Trying SSL Connection..."
@@ -46,4 +47,3 @@ print " Start contacting dest server... \n"
 #Print length for debug purpose
 	print "The file length is ", smtstrlen
 	print "\n"
-
